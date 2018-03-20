@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+// require('../routes/index');
+// require('../controllers/controllers');
 
 mongoose.connect("mongodb://localhost:27017/mysitedb");
 
@@ -13,11 +15,24 @@ mongoose.connection.on('disconnect', function () {
 });
 
 const userSchema = new mongoose.Schema({
-    name: {type: String, required: true},
-    email: {type: String, required: true},
-    password: {type: String, required: true},
+    name: {
+        type: String,
+        // required: [true,"usernameRequired"],
+        // maxLength:[16,"tooLong"],
+        // minLength:[2,"tooShort"],
+        // match:[/^[a-z0-9]+$/,"usernameIncorrect"]
+    },
+    // email: {
+    //     type: String,
+    //    },
+    // password: {
+    //     type: String,
+        // maxLength:[32,"tooLong"],
+        // minLength:[6,"tooShort"],
+        // match:[/^[A-Za-z0-9]+$/,"passwordIncorrect"],
+        // },
     sex: String,
-    age: {type: Number, "default": 0, min:0, max: 100},
+    // age: {type: Number, "default": 0, min:0, max: 100},
     country: [String]
 });
 
@@ -32,5 +47,9 @@ const locationSchema = new mongoose.Schema({
    reviews: [reviewSchema]
 });
 
-const Location = mongoose.model('location', locationSchema);
-const User = mongoose.model('User', userSchema);
+// const Location = mongoose.model('location', locationSchema);
+module.exports.User = mongoose.model('User', userSchema);
+
+
+
+

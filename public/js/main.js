@@ -38,13 +38,13 @@ $(document).ready(function(){
     //Вставка видое
     $('.promo_button').click(function () {
         $('.popup_block_video').fadeIn();
-        $('body').append('<div id ="fade_video"></div>').css('display','block');
+        $('body').append('<div id ="fade"></div>');
         return false;
     });
 
-    $(document).on('click', '#fade_video',function () {
-        $('#fade_video, .popup_block_video').fadeOut(function () {
-            $('#fade_video').remove();
+    $(document).on('click', '#fade',function () {
+        $('#fade, .popup_block_video').fadeOut(function () {
+            $('#fade').remove();
         });
         return false;
     })
@@ -55,7 +55,6 @@ $(document).ready(function(){
 $(document).ready(function () {
     $(document).scroll(function(){
         let top = $(this).scrollTop();
-        // let top = $(this).scrollTop;
         console.log(top);
         if(top >= 100) {
             $('header').removeClass('header').addClass('headerScroll');
@@ -67,6 +66,18 @@ $(document).ready(function () {
     });
 
     // Увеличение картинок при клике
+
+    $('a.enter').click(function () {
+        $('.popup_block_enter').fadeIn(500);
+        $('body').append('<div id ="fade"></div>').css('display','block');
+        return false;
+    });
+    $(document).on('click', '#fade',function () {
+        $('#fade, .popup_block_enter').fadeOut(function () {
+            $('#fade').remove();
+        });
+        return false;
+    })
 
 });
 

@@ -1,5 +1,5 @@
 #fade {
-    display: none;/*--по умолчанию скрыто--*/
+    display: block;/*--по умолчанию скрыто--*/
     background: rgba(81, 87, 105, 0.6);
     position: fixed;
     left: 0;
@@ -9,6 +9,26 @@
     opacity: .80;
     z-index: 9999;
 }
+
+.popup_block_enter{
+    top: calc(50% - 100px);
+    left:calc(50% - 250px);
+    display: none;
+    background: #ffffff;
+    position: fixed;
+    width: 500px;
+    height: 200px;
+    z-index: 999999;
+    box-shadow: 0 0 20px #000;
+    text-align: left;
+}
+.popup_block_enter label, .popup_block_enter input{
+    margin-left: 50px;
+    margin-top: 10px;
+    display: block;
+}
+
+
 .popup_block {
     display: none; /*--по умолчанию скрыто--*/
     background: #fff;
@@ -72,14 +92,14 @@
     top: 250px;
     right: 25%;
 }
-#fade_video {
-    /*display: none;!*--по умолчанию скрыто--*!*/
-    background: rgba(81, 87, 105, 0.6);
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: .80;
-    z-index: 9999;
-}
+/*#fade_video {*/
+    /*!*display: none;!*--по умолчанию скрыто--*!*!*/
+    /*background: rgba(81, 87, 105, 0.6);*/
+    /*position: fixed;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*opacity: .80;*/
+    /*z-index: 9999;*/
+/*}*/

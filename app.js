@@ -8,18 +8,19 @@ require('./app_server/models/db');
 const index = require('./app_server/routes/index');
 
 const app = express();
+// const jsonParser = bodyParser.json();
+
+
 
 app.set('x-powered-by', false);
 app.set('views', __dirname + '/views');
 app.engine('mustache', mustacheExpress());
 app.set('view engine','mustache');
 
-
-
 app.use('/public', express.static('public'));
-
-app.use('/',index);
+app.use('/', index);
 app.use('/registration', index);
+app.use('/places', index);
 
 app.use(function (req, res, next) {
     const error = new Error('Not found');
