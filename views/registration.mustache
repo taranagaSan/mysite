@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="public/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/jquery-ui.min.css">
     <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/map.css">
+    <link rel="stylesheet" href="public/css/form.css">
     <link rel="stylesheet" href="public/css/madolBlock.css">
     <script src="public/js/main.js" ></script>
     <script src="public/js/form.js" ></script>
@@ -45,8 +45,8 @@
         <fieldset>
             <legend>Контактная информация</legend>
             <div><label for="userName">Имя</label><input title="Длина имени должна составлять не менее 2 символов" type="text" id="userName"name="userName" placeholder="Введите имя"> <div class="error_box"></div></div>
-            <div><label for="password">Пароль</label><input type="password" id="password" name="password" title="Пароль должен содержать больше 6 символов и длина имени должна составлять не менее 2 символов"><div class="error_box"></div></div>
-            <div><label for="passwordTrue">Повторите пароль</label><input type="password" id="passwordTrue" name="password"></div><div class="error_box"></div>
+            <div><label for="password">Пароль</label><input type="password" id="password" name="password" title="Пароль должен содержать больше 6 символов и длина имени должна составлять не менее 2 символов" placeholder="Введите пароль"><div class="error_box"></div></div>
+            <div><label for="passwordTrue">Повторите пароль</label><input type="password" id="passwordTrue" name="password" placeholder="Повторите пароль"></div><div class="error_box"></div>
             <p><label for="email">E-mail</label><input type="email" id="email" name="email" placeholder="example@mail.com"></p>
             <p><label for="region">Выбирите страну</label><select class="form-control" id="region">
                 <option value="AX">AALAND ISLANDS</option>
@@ -275,11 +275,30 @@
                 <option value="ZW">ZIMBABWE</option>
             </select></p>
             <p><label for="sex">Пол<select name="" id="sex">
-                <option value="Мужской">Мужской</option>
                 <option value="Женский">Женский</option>
+                <option value="Мужской">Мужской</option>
             </select></label></p>
+            <p><label for="age">Возраст</label><input type="number"></p>
             <input type="submit" value="Отправить">
         </fieldset>
+    </form>
+</div>
+<div class="popup_block_enter">
+    <form action="" id="enter_form">
+        <div class="enter_data">
+            <div><label for="email">Адресс элеткронной почты</label><input type="text" id="email_enter" name="email"></div>
+            <div><label for="password">Пароль</label><input type="text" id="password_enter" name="password" ></div>
+            <div class="enter_data_buttons">
+                <a>Войти</a>
+                <a href="registration">Регистрация</a>
+            </div>
+        </div>
+        <div>
+            <a>Забыли пароль?</a>
+            <p>После регистрации вам будет доступна услуга
+                помощи в организации туристического визита в страну
+            </p>
+        </div>
     </form>
 </div>
 </body>

@@ -22,17 +22,17 @@ const userSchema = new mongoose.Schema({
         // minLength:[2,"tooShort"],
         // match:[/^[a-z0-9]+$/,"usernameIncorrect"]
     },
-    // email: {
-    //     type: String,
-    //    },
-    // password: {
-    //     type: String,
-        // maxLength:[32,"tooLong"],
+    email: {
+        type: String,
+       },
+    password: {
+        type: String,
+        // maxLength:[16,"tooLong"],
         // minLength:[6,"tooShort"],
         // match:[/^[A-Za-z0-9]+$/,"passwordIncorrect"],
-        // },
+        },
     sex: String,
-    // age: {type: Number, "default": 0, min:0, max: 100},
+    age: {type: Number, "default": 0, min:0, max: 100},
     country: [String]
 });
 

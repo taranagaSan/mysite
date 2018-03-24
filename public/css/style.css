@@ -253,3 +253,22 @@ strong {
     overflow: hidden;
     padding-top: 25px;
 }
+
+.enter_data_buttons{
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 16px;
+
+}
+.enter_data_buttons a{
+    background-color:rgb(81, 87, 105);
+    border-radius: 2px;
+    padding: 8px;
+    margin-right: 10px;
+}
+.enter_data_buttons a:hover{
+    color: #17bed2;
+    text-decoration: none;
+}
+

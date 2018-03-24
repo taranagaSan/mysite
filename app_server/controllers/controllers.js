@@ -25,7 +25,11 @@ let createUser = function (req, res) {
     User.User.create({
         name: req.body.userName,
         sex: req.body.sex,
-        country: req.body.country
+        country: req.body.country,
+        password:req.body.password,
+        age: req.body.age,
+        email: req.body.email
+
     }, function (error, users) {
         if(error) {
             return sendJsonResponce(res, 400, error);
